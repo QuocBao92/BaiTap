@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .Caculator{
+            color:orchid;
+            text-transform: uppercase;
+            font-family: cursive;
+        }
+        #result{
+            color: blue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="Caculator"> Caculator</h2>
+    <table>      
+        <tr>
+           <td colspan="2">
+               <input type="number"  id="soA" name="soA" value="">
+            </td> 
+            <td colspan="2">
+               <input type="number"  id="soB" name="soB" value="">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="Addition(+)" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="Subtraction(-)" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value="Mutiplication(X)"onClick = "mutip()">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="Division(/)" onClick = "div()">
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        function tinhtoan(e){
+            let x = + document.getElementById("soA").value ;
+            let y = + document.getElementById("soB").value ;
+            if(e === 'Addition(+)') {
+                console.log(e);   
+                let z = x+y;
+                document.getElementById("result").innerHTML = 'Result Addition: ' +z;
+            }
+            if(e === 'Subtraction(-)') {
+                console.log(e);
+                let z = x-y;
+                document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
+            }
+              
+              
+        }
+        function sub(){
+            console.log('222');
+              let x = + document.getElementById("soA").value ;
+              let y = + document.getElementById("soB").value ;
+              let z = x-y;
+              document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
+        }
+        function mutip(){
+              let x = + document.getElementById("soA").value ;
+              let y = + document.getElementById("soB").value ;
+              let z = x*y;
+              document.getElementById("result").innerHTML = 'Result Mutiplication: ' +z;
+        }
+        function div(){
+              let x = + document.getElementById("soA").value ;
+              let y = + document.getElementById("soB").value ;
+              let z = x/y;
+              document.getElementById("result").innerHTML = 'Result Division: ' +z;
+              if (y==0) {
+                  alert('Khong the chia cho 0');
+                  document.getElementById("result").innerHTML = 'Result Division: Mời nhập lại ' ;
+              }
+        }
+    </script>
+</body>
+</html>

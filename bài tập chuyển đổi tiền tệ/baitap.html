@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baodeptrai</title>
+    <style>
+        #moi{
+            background-color: burlywood;
+        }
+        #convert{
+            color:darkturquoise;
+             }
+        #baitap{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center; 
+            color:slateblue;
+        }
+    </style>
+</head>
+<body style="background-color: burlywood">  
+    
+    <div id="baitap">
+            <h2>Bài tập chuyển đổi tiền tệ</h2>
+            <h4>Nguyễn Quốc Báo C0619G01</h4>
+    </div>
+    
+   
+        <table>
+            <thead>
+              <tr>
+                <th>Amount</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>From Currency</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>To Currency</th>
+                
+                <th></th>
+              </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td  >
+                        <input id="tien" type="text" value="">
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td  >
+                        <select id="f">
+                            <option value="fVND">Việt Nam (VNĐ)</option>
+                            <option value="fUSD">Mỹ (USD)</option>
+                            <option value="fJPY">Yên Nhật(JPY)</option>
+                            
+                          </select>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td  >
+                        <select id="t">
+                            <option value="tVND">Việt Nam (VNĐ)</option>
+                            <option value="tUSD">Mỹ (USD)</option>
+                            <option value="tJPY">Yên Nhật(JPY)</option>
+                        </select>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <input id = "convert" type="submit" value="Convert"  onClick = "convert()" >
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <div id="demo" style="color:olivedrab" ></div>
+    
+        <script>
+            function convert(){
+                let amount = document.getElementById('tien').value; //lay gia tri tien nhap vao
+                let amountFloat = parseFloat(amount);
+                let result ;
+                let fvalue = document.getElementById('f').value;
+                let tvalue = document.getElementById('t').value;
+                let fviet = fvalue === 'fVND';
+                let fmy = fvalue ==='fUSD';
+                let fnhat = fvalue === 'fJPY';
+                let tviet= tvalue ==='tVND';
+                let tmy = tvalue ==='tUSD';
+                let tnhat = tvalue ==='tJPY';
+                const vietmy = 1/23000;
+                const vietnhat = 1/213.8;
+                const myviet = 23000;
+                const mynhat = 108.42;
+                const nhatviet = 213.8;
+                const nhatmy = 1/108.42;
+                if (fviet && tmy){
+                    result = amountFloat*vietmy;
+                }
+                else if (fviet && tnhat){
+                    result = amountFloat*vietnhat;
+                }else if(fmy && tviet){
+                    result = amountFloat*myviet;
+                }else if(fmy && tnhat){
+                    result = amountFloat*mynhat;
+                }else if(fnhat && tviet){
+                    result = amountFloat*nhatviet;
+                }else if(fnhat && tmy){
+                    result = amountFloat*nhatmy;
+                }else {
+                    result = amountFloat;
+                }
+                document.getElementById("demo").innerHTML = ' Result :' + result ;
+                }
+                    
+            
+                        
+        </script>
+ 
+
+</body>
+</html>
