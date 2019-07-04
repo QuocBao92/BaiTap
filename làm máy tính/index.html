@@ -38,10 +38,10 @@
                 <input type="submit" name="subtraction" id="subtraction" value="Subtraction(-)" onclick = "tinhtoan(this.value)">
             </td>      
             <td>
-                    <input type="submit" name="mutiplication" id="mutiplication" value="Mutiplication(X)"onClick = "mutip()">
+                    <input type="submit" name="mutiplication" id="mutiplication" value="Mutiplication(X)" onClick = "tinhtoan(this.value)">
             </td>
             <td>
-                    <input type="submit" name="divison" id="division" value="Division(/)" onClick = "div()">
+                    <input type="submit" name="divison" id="division" value="Division(/)" onClick = "tinhtoan(this.value)">
             </td>
         </tr>
     </table>
@@ -60,32 +60,22 @@
                 let z = x-y;
                 document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
             }
+            if(e === 'Mutiplication(X)') {
+                console.log(e);
+                let z = x*y;
+                document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
+            }
+            if(e === 'Division(/)') {
+                console.log(e);
+                let z = x/y;
+                document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
+            }
+
               
               
         }
-        function sub(){
-            console.log('222');
-              let x = + document.getElementById("soA").value ;
-              let y = + document.getElementById("soB").value ;
-              let z = x-y;
-              document.getElementById("result").innerHTML = 'Result Subtraction: ' +z;
-        }
-        function mutip(){
-              let x = + document.getElementById("soA").value ;
-              let y = + document.getElementById("soB").value ;
-              let z = x*y;
-              document.getElementById("result").innerHTML = 'Result Mutiplication: ' +z;
-        }
-        function div(){
-              let x = + document.getElementById("soA").value ;
-              let y = + document.getElementById("soB").value ;
-              let z = x/y;
-              document.getElementById("result").innerHTML = 'Result Division: ' +z;
-              if (y==0) {
-                  alert('Khong the chia cho 0');
-                  document.getElementById("result").innerHTML = 'Result Division: Mời nhập lại ' ;
-              }
-        }
+        
+        
     </script>
 </body>
 </html>

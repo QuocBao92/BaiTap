@@ -107,7 +107,12 @@
                 }else {
                     result = amountFloat;
                 }
+                if(result<0){
+                    alert('Nhập lại');
+                    document.getElementById("demo").innerHTML = " Nhap lai :" ;
+                }else    {
                 document.getElementById("demo").innerHTML = ' Result :' + result ;
+                        }
                 }
                     
             

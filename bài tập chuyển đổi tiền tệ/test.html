@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>From Currency</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="number" id="tien" value="">
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <select name="from" id="f">
+                        <option value="fVND">Việt Nam (VND)</option>
+                        <option value="fUSD">Mỹ (USD)</option>
+                        <option value="fJPY">Nhật Bản (JPY)</option>
+                    </select>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <select name="to" id="t">
+                        <option value="tVND">Việt Nam (VND)</option>
+                        <option value="tUSD">Mỹ (USD)</option>
+                        <option value="tJPY">Nhật Bản (JPY)</option>
+                    </select>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="submit" id="convert" value="Convert" onclick="convert()"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="kq" style="color: blueviolet"></div>
+    <script>
+        function convert(){
+            console.log('1221')
+            let amount = +document.getElementById("tien").value ; //lay gia tri từ amount
+            let result;
+            let fvalue = document.getElementById('f').value ; //chon gia trị từ from Currency
+            let tvalue = document.getElementById('t').value ;//chọn giá trị từ to Currency
+            let fviet = fvalue ==='fVND';
+            let fmy = fvalue ==='fUSD';
+            let fnhat = fvalue ==='fJPY';
+            let tviet = tvalue ==='tVND';
+            let tmy = tvalue ==='tUSD';
+            let tnhat = tvalue ==='tJPY';
+            const vietmy = 1/23000 ;
+            const vietnhat = 1/213;
+            const myviet = 23000;
+            const mynhat = 108;
+            const nhatviet = 213;
+            const nhatmy = 1/108;
+            if (fviet && tmy){
+                result = amount*vietmy;
+            }else if (fviet && tnhat){
+                result = amount*vietnhat;
+            }else if (fmy && tviet){
+                result = amount*myviet;
+            }else if (fmy && tnhat){
+                result = amount*mynhat;
+            }else if (fnhat && tviet){
+                result = amount*nhatviet;
+            }else if (fnhat && tmy){
+                result = amount*nhatmy;
+            }else {
+                result = amount;
+            }
+            if (result < 0) {
+                alert('Nhập lại');
+                document.getElementById("kq").innerHTML = 'Result: Vui lòng nhập lại ';
+
+            }else {
+                document.getElementById("kq").innerHTML = 'Result: ' + result;
+            }
+
+        }
+    </script>
+</body>
+</html>
