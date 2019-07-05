@@ -37,9 +37,9 @@
 
 
     <script>
-        let weight = parseFloat(prompt('Nhập cân nặng: '));
-        let height = parseFloat(prompt('Nhập chiều cao'));
-        let bmi = weight / height*height;
+        let weight = parseFloat(prompt('Nhập cân nặng (đơn vị kg): '));
+        let height = parseFloat(prompt('Nhập chiều cao (đơn vị met): '));
+        let bmi = weight / (height*height);
         let result;
         if (bmi < 18) 
             result = "Underweight"
@@ -49,6 +49,8 @@
             result ="Overweight";
         else 
             result ="Obese";
+        console.log(bmi);
+        console.log(result);
         document.getElementById("demo").innerHTML = result;
 
     </script>
