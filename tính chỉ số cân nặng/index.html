@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:yellow;
+                font-size: 30px;
+                text-align: center;
+            }           
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="td">
+                    <h2>[Bài tập] Tính chỉ số cân nặng !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <div id="demo" style="font-size: 40px; text-align: center"></div>
+        </div> 
+
+
+    <script>
+        let weight = parseFloat(prompt('Nhập cân nặng: '));
+        let height = parseFloat(prompt('Nhập chiều cao'));
+        let bmi = weight / height*height;
+        let result;
+        if (bmi < 18) 
+            result = "Underweight"
+        else if (bmi < 25.0)
+            result = "Normal";
+        else if (bmi < 30.0)
+            result ="Overweight";
+        else 
+            result ="Obese";
+        document.getElementById("demo").innerHTML = result;
+
+    </script>
+</body>
+</html>

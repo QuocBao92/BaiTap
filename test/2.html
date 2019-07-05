@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let date = new Date();
+        let current_day = date.getDay();
+        let date_name = '';
+        console.log(current_day);
+        switch(current_day){
+            case 0: 
+                date_name = "Sunday";
+                break;
+            case 1: 
+                date_name = "Monday";
+                break;
+            case 2: 
+                date_name = "Tuesday";
+                break;
+            case 3: 
+                date_name = "Webnesday";
+                break;
+            case 4: 
+                date_name = "Thursday";
+                break;
+            case 5: 
+                date_name = "Friday";
+                break;
+            case 0: 
+                date_name = "Saturday";
+                break;
+        }
+        document.getElementById("result").innerHTML = date_name;
+    </script>
+</body>
+</html>
