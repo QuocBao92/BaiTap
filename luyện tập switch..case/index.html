@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:brown;
+                font-size: 30px;
+                text-align: center;
+            }           
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="td">
+                    <h2>[Bài tập] Câu lệnh switch..case !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <div id="demo" style="font-size: 40px; text-align: center"></div>
+                <form>
+                    <fieldset>
+                        <legend>Tính ngày trong tháng</legend>
+                        Nhập tháng :
+                        <input type="text" id="thang" name="" value="">
+                        <button type="button" id="btm" onclick="tinh()">Tính số ngày</button> 
+                        <div id="Result"></div>
+                    </fieldset>
+                  </form>
+        </div> 
+       
+    <script>
+
+            function tinh(){
+            
+                let number = +document.getElementById('thang').value ;
+                let kq ;
+                console.log(number);
+                switch (number) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        kq =  'có 31 ngày';
+                        break;
+                    case 2:
+                        kq = 'có 29 hoặc 30 ngày';
+                        break;
+                    case 4:
+                    case 6:
+                    case 2:
+                    case 9:
+                    case 11:
+                        kq = 'có 30 ngày';   
+                        break;
+                    default:
+                        kq = 'Số ngày nhập vào không phải là tháng! vui lòng nhập lại';
+                        break;  
+                }   
+                     
+                document.getElementById("Result").innerHTML ="tháng "+number+ ": "+kq;
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+      function chia(){
+        alert("teo");
+}
+</script>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div class="wrapper">
+		<input class="show" id="ketqua" type="text"/>
+	<div>
+        <input type="button" class="nut" value="MC" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="MR" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="MS" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="M+" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="M-" onclick="ketqua.value+=this.value"/>
+        </div>
+
+        <div>
+        <input type="button" class="nut" value="<-" onclick="ketqua.value=ketqua.value.substr(0,ketqua.value.length-1)"/>
+        <input type="button" class="nut" value="CE" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="C" onclick="ketqua.value=''"/>
+        <input type="button" class="nut cong" value="+-" onclick="ketqua.value=eval((-1)*ketqua.value)"/>
+        <input type="button" class="nut" value="√" onclick="ketqua.value=eval(Math.sqrt(ketqua.value))"/>
+        </div>
+
+        <div>
+        <input type="button" value="7" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="8" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="9" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="/" onclick="chia();"/>
+        <input type="button" class="nut" value="%" onclick="ketqua.value=eval(ketqua.value/100)"/>
+        </div>
+
+        <div>
+        <input type="button" value="4" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="5" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="6" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="*" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="1/x" onclick="ketqua.value=eval(1/ketqua.value)"/>
+        </div>
+
+        <div>
+        <input type="button" value="1" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="2" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" value="3" class="nut num" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="+" onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut operator" value="-" onclick="ketqua.value+=this.value"/>
+
+        </div>
+
+        <div>
+        <input type="button" value="0" class="nut khong num"  onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut " value="." onclick="ketqua.value+=this.value"/>
+        <input type="button" class="nut" value="=" onclick="ketqua.value=eval(ketqua.value)"/>
+        </div>
+</div>
+</body>
+</html>
+
+

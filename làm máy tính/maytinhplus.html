@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .Caculator{
+            color:orchid;
+            text-transform: uppercase;
+            font-family: cursive;
+        }
+        #result{
+            color: blue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="Caculator"> Caculator</h2>
+    <table>      
+        <tr>
+           <td colspan="7">
+               <input type="text"  id="so" name="so" value="">
+            </td> 
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            
+        
+        </tr>
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="Rad" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="P" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value="x!" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="(" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value=")" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="%" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="AC" onclick = "tinhtoan(this.value)">
+            </td>
+
+        </tr>
+
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="Ivn" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="Sin" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value=" Ln" onClick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="7" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="8" onclick = "tinhtoan(this.value)">  
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="9" onclick = "tinhtoan(this.value)">
+            </td>   
+            <td>
+                <input type="submit" name="divison" id="division" value="/" onclick = "tinhtoan(this.value)">
+            </td>
+
+        </tr> 
+
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="π" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="cos" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value="log(e)" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="4" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="5" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="6" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="*" onclick = "tinhtoan(this.value)">
+            </td>
+
+        </tr>
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="e" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="tan" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value="√" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="1" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="2 " onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="3 " onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="-" onclick = "tinhtoan(this.value)">
+            </td>
+
+        </tr>  
+        <tr>           
+            <td>
+                    <input type="submit" name="addition" id="addition" value="Ans" onclick="tinhtoan(this.value)">
+            </td>          
+            <td>
+                <input type="submit" name="subtraction" id="subtraction" value="EXP" onclick = "tinhtoan(this.value)">
+            </td>      
+            <td>
+                    <input type="submit" name="mutiplication" id="mutiplication" value="√" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                    <input type="submit" name="divison" id="division" value="0" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="." onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="=" onclick = "tinhtoan(this.value)">
+            </td>
+            <td>
+                <input type="submit" name="divison" id="division" value="+" onclick = "tinhtoan(this.value)">
+            </td>
+
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        let bieuthuc = document.getElementById("so").value;
+        function tinhtoan(e){
+            // let x = + document.getElementById("soA").value ;
+            // let y = + document.getElementById("soB").value ;
+            consol
+            if(e === '=') {
+                console.log(bieuthuc);
+                bieuthuc = eval(bieuthuc);
+                document.getElementById("so").value = bieuthuc;
+                console.log(bieuthuc);
+            } else {
+                if (e === 'AC') {
+                    bieuthuc = '';
+                    document.getElementById("so").value = bieuthuc;
+                }else {
+                bieuthuc = bieuthuc + e ;
+                document.getElementById("so").value = bieuthuc;
+                }
+            }     
+              
+        }
+        
+        
+    </script>
+</body>
+</html>
