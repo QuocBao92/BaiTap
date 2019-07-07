@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .td{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:brown;
+                font-size: 30px;
+                text-align: center;
+            }
+            .number{
+                padding-left: 10px;
+                padding-right:10px;
+                padding-top: 10px;
+                border-radius: 3px;
+                background-color: cadetblue;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 5px;
+                padding-bottom: 5px;
+            }      
+            #style-btm {
+                font-size: 25px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .tinh {
+                padding-left: 10px;
+                padding-right:10px;
+                padding-top: 5px;
+                border-radius: 3px;
+                background-color: cadetblue;
+                font-size: 25px;
+                text-align: center;
+                margin-top: 5px;
+                padding-bottom: 5px;
+            }
+            #C{
+                padding-left: 10px;
+                padding-right:8px;
+                padding-top: 11px;
+                border-radius: 3px;
+                background-color: cadetblue;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 5px;
+                padding-bottom: 5px;
+            }
+            #kq{
+                padding-left: 10px;
+                padding-right:0px;
+                padding-top: 0px;
+                border-radius: 3px;
+                background-color: cadetblue;
+                font-size: 12px;
+                text-align:right;
+                margin-top: 5px;
+                padding-bottom: 5px;
+            }
+    </style>
+</head>
+<body style="background-color: burlywood">
+        <div class="wrapper">
+            <div class="td">
+            <h2>[Bài tập] Làm máy tính đơn giản !!</h2>
+            <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Làm máy tính</legend>
+                <div>
+                    <div>
+                        <input type="text" name="kq" id="kq" value="">
+                    </div>
+                    <div id="style-btm">
+                        <div >
+                            <input type="button" class="number" value="1" onclick="kq.value += this.value">
+                            <input type="button" class="number" value="2" onclick="kq.value += this.value">
+                            <input type="button" class="number" value="3" onclick="kq.value += this.value">
+                            <input type="button" class="tinh" value="+" onclick="kq.value += this.value">
+
+                        </div>
+
+                        <div>
+                                <input type="button" class="number" value="4" onclick="kq.value += this.value">
+                                <input type="button" class="number" value="5" onclick="kq.value += this.value">
+                                <input type="button" class="number" value="6" onclick="kq.value += this.value">
+                                <input type="button" class="tinh" style="padding-left: 13px; padding-right: 13px;" value="-" onclick="kq.value += this.value">
+                        </div>
+
+                        <div>
+                                <input type="button" class="number" value="7" onclick="kq.value += this.value">
+                                <input type="button" class="number" value="8" onclick="kq.value += this.value">
+                                <input type="button" class="number" value="9" onclick="kq.value += this.value">
+                                <input type="button" class="tinh" style="padding-left: 13px;padding-right: 12px;padding-bottom: 3px;padding-top: 5px" value="*" onclick="kq.value += this.value">
+                        </div>
+
+                        <div>
+                                <input type="button"  id="C" value="C" onclick="kq.value=''">
+                                <input type="button" class="number" value="0" onclick="kq.value += this.value">
+                                <input type="button" class="number" value="=" onclick="kq.value = eval(kq.value)">
+                                <input type="button" class="tinh" style="padding-left: 13px;padding-right: 13   px;padding-bottom: 3px;padding-top: 5px" value="/" onclick="kq.value +=  this.value">
+                        </div>
+                    </div>
+                </div>  
+            </fieldset>
+        
+</body>
+</html>
