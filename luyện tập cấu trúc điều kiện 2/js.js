@@ -27,7 +27,7 @@ function triangle() {
     let a = parseFloat(document.getElementById('5a').value );
     let b = parseFloat(document.getElementById('5b').value );
     let result = a*b/2;
-    alert ('Diện tích hình chữ nhật là: '+result);
+    alert ('Diện tích hình tam giác là: '+result);
 }
 
 
