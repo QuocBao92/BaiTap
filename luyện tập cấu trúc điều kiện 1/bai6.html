@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:saddlebrown;
+                font-size: 25px;
+                text-align: center;
+            }    
+            #btm {
+                left: 423px;
+                top: 278px;
+                position: absolute;
+            }
+            #kq{
+                color: rgba(193, 206, 15, 0.836);
+                position: absolute;
+                font-size: 20px;
+                left: 205px;
+                top: 312px;
+            }
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="name">
+                    <h2>[Bài tập] Kiểm tra hoa hồng (= 10% doanh thu) !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <br>
+                <br>
+                <div>
+                    Nhập Doanh Thu bán hàng: <input type="text" id = "a" value =""><br>
+                    
+                    <br>
+                    
+                    <input type="button" id = "btm" value ="Kiểm tra" onclick="check()">
+                    <br>
+                </div>
+                <div id="kq"></div>
+        </div>
+        
+        <script>
+            function check() {
+                let x = +document.getElementById("a").value;
+                
+                let result;
+                result = x*10/100;
+                console.log(x);
+                
+                document.getElementById("kq").innerHTML = 'Doanh thu nhận được là ' + result;
+                   
+                
+            }
+           
+        </script>
+</body>
+</html>

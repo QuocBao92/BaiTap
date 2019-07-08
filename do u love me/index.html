@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:saddlebrown;
+                font-size: 30px;
+                text-align: center;
+            }    
+            
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="name">
+                    <h2>[Bài tập] Do You Love Me !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <div id="demo" style="font-size: 40px; text-align: center"></div>
+                <div class="result">
+                    <h2>Do You Love Me!!</h2>
+                    <input type="button" id="yes" value="Yes" style="position:absolute; left: 409px;
+                    top: 266px;"   onclick="yes()" >
+                    <input type="button" id="btm-no" value = "No" style="position:absolute; left:474px; top:267px;"   onmouseover = "no()">
+                </div>
+        </div> 
+
+        <script>
+            function yes() {
+                alert("I Love You too!!");
+            }
+
+            function no() {
+                let x = Math.round(Math.random() * window.innerWidth);
+                let y = Math.round(Math.random() * window.innerWidth);
+                console.log(x);
+                console.log(y);
+                document.getElementById('btm-no').style.left = x/5 + 'px';
+                document.getElementById('btm-no').style.top = y/5 + 'px';
+            }
+        </script>
+</body>
+</html>

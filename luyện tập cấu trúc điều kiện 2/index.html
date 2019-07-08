@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="wrapper"></div>
+        <div class="myname">
+            <h2>[Bài tập] Luyện tập cấu trúc điều kiện 2 !</h2>
+            <h4> Nguyễn Quốc Báo C0619G1 </h4>
+        </div>
+
+        <div class="noidung">
+            <fieldset class="debai">
+                <legend>Đề bài</legend>
+                    Bài 1: Chuyển từ độ C sang độ F. <br>
+
+                    Bài 2: Chuyển từ mét sang feet:<br>
+
+                    Bài 3: Tính diện tích hình vuông khi biết cạnh a.<br>
+
+                    Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.<br>
+
+                    Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.<br>
+
+                    Bài 6: Giải phương trình bậc 1.<br>
+
+                    Bài 7: Giải phương trình bậc 2. <br>
+
+                    Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0. <br>
+
+                    Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là: <br>
+
+                    Bài 10: Viết chương trình tính giá điện. <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bài làm</legend>
+
+                Bài 1: <br><br>
+                <form action="">
+                    Nhập Độ C: <br>
+                    <input type="text" id="1" value="">
+                    <input type="button" class="btm" onclick="convertCtoF()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 2: <br>
+                <form action="">
+                    Nhập chiều dài (met): <br>
+                    <input type="text" id="2" value="">
+                    <input type="button" class="btm" onclick="convertMtoF()" value="Kiểm Tra">
+
+                </form>
+                <br>
+                Bài 3: <br>
+                <form action="">
+                    Nhập cạnh a: <br>
+                    <input type="text" id="3" value="">
+                    <input type="button" class="btm" onclick="square()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 4: <br>
+                <form action="">
+                    Nhập cạnh a: <br>
+                    <input type="text" id="4a" value=""><br>
+                    Nhập cạnh b: <br>
+                    <input type="text" id="4b" value="">
+                    <input type="button" class="btm" onclick="rectangle()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 5: <br>
+                <form action="">
+                    Nhập cạnh a: <br>
+                    <input type="text" id="5a" value=""><br>
+                    Nhập cạnh b: <br>
+                    <input type="text" id="5b" value="">                   
+                    <input type="button" class="btm" onclick="triangle()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 6: <br>
+                <form action="">
+                    Nhập  a: <br>
+                    <input type="text" id="6a" value=""><br>
+                    Nhập  b: <br>
+                    <input type="text" id="6b" value="">                 
+                    <input type="button" class="btm" onclick="ptBac1()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 7: <br>
+                <form action="">
+                    Nhập a: <br>
+                    <input type="text" id="7a" value=""><br>
+                    Nhập b: <br>
+                    <input type="text" id="7b" value=""> <br>
+                    Nhập c: <br>
+                    <input type="text" id="7c" value=""> 
+                    <input type="button" class="btm" onclick="ptBac2()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 8: <br>
+                <form action="">
+                    Nhập Số: <br>
+                    <input type="text" id="8" value="">
+                    <input type="button" class="btm" onclick="checkYearOld()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 9: <br>
+                <form action="">
+                    Nhập a: <br>
+                    <input type="text" id="9a" value=""><br>
+                    Nhập b: <br>
+                    <input type="text" id="9b" value=""> <br>
+                    Nhập c: <br>
+                    <input type="text" id="9c" value=""> 
+                    <input type="button" class="btm" onclick="checkTriangle()" value="Kiểm Tra">
+                </form>
+                <br>
+                Bài 10: <br>
+                <form action="">
+                    Nhập Số điện tiêu thụ: <br>
+                    <input type="text" id="10" value="">
+                    <input type="button" class="btm" onclick="electricity()" value="Kiểm Tra">
+                </form>
+                <br>
+            </fieldset>
+
+        </div>
+        <script src="js.js">
+            
+        </script>
+</body>
+</html>

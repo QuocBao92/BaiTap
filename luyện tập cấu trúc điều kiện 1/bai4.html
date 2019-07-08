@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:saddlebrown;
+                font-size: 30px;
+                text-align: center;
+            }    
+            #btm {
+                left: 100px;
+                top: 110px;
+                position: absolute;
+            }
+            #kq{
+                color: aqua;
+                position: absolute;
+                left: 578px;
+                top: 402px;
+            }
+
+            .so{
+                position: absolute;
+                width: 150px;
+            }
+
+            #test {
+                vertical-align: middle;
+                position: absolute;
+                left: 500px;
+                top: 261px;
+            }
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="name">
+                    <h2>[Bài tập] Kiểm tra Số lớn nhất !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <br>
+                <br>
+                <div id="test">
+                    Nhập A: <input class="so" type="text" id = "a" value =""><br><br>
+                    Nhập B: <input class="so" type="text" id = "b" value =""><br><br>
+                    Nhập C: <input class="so" type="text" id = "c" value =""><br><br>
+                    
+                    <br>
+                    
+                    <input type="button" id = "btm" value ="Kiểm tra" onclick="check()">
+                    <br>
+                </div>
+                <div id="kq"></div>
+        </div>
+        
+        <script>
+            function check() {
+                let x = +document.getElementById("a").value;
+                let y = +document.getElementById("b").value;
+                let z = +document.getElementById("c").value;              
+                let max = x;
+               
+              
+                console.log(max);
+                
+                if (max < y) {
+                    max = y;
+                }if ( max < z){
+                    max = z;
+                }
+                alert (max);
+                document.getElementById("kq").innerHTML = 'Số lớn nhất là ' + max;
+                   
+                
+            }
+           
+        </script>
+</body>
+</html>

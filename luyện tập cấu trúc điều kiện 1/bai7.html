@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:saddlebrown;
+                font-size: 30px;
+                text-align: center;
+            }    
+            #btm {
+                left: 376px;
+                top: 367px;
+                position: absolute;
+            }
+            #kq{
+                color: aqua;
+                position: absolute;
+                left: 279px;
+                top: 397px;
+            }
+    </style>&pns
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="name">
+                    <h2>[Bài tập] Kiểm tra cước điện thoại !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <br>
+                <br>
+                <div>
+                    Phút gọi nội mạng &nbsp;  : <input type="text" id = "a" value ="0"><br><br>
+
+                    Phút gọi ngoại mạng: <input type="text" id = "b" value ="0"><br><br>
+                    <br>
+                    
+                    <input type="button" id = "btm" value ="Kiểm tra" onclick="check()">
+                    <br>
+                </div>
+                <div id="kq"></div>
+        </div>
+        
+        <script>
+
+            function check() {
+                
+                let x = parseFloat(document.getElementById("a").value);
+                let y = parseFloat(document.getElementById("b").value);
+                let result;
+                result = x*850 + y*2000;
+                console.log(x);
+                console.log(y);
+                alert ('Số tiền phải trả là '+ result);
+                document.getElementById("kq").innerHTML = 'Số tiền phải trả là : ' + result;
+                           
+            }
+           
+        </script>
+</body>
+</html>

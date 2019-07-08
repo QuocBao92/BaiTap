@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>        
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background:darkcyan;
+                height: 650px;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color:saddlebrown;
+                font-size: 30px;
+                text-align: center;
+            }    
+            #btm {
+                left: 50px;
+                top: 227px;
+                position: absolute;
+            }
+            #kq{
+                color: aqua;
+                position: absolute;
+                left: 578px;
+                top: 402px;
+            }
+
+            .so{
+                position: absolute;
+                width: 150px;
+            }
+
+            #test {
+                vertical-align: middle;
+                position: absolute;
+                left: 500px;
+                top: 261px;
+            }
+    </style>
+
+</head>
+
+<body  style="background-color: burlywood">
+        <div class="wrapper">
+                <div class="name">
+                    <h2>[Bài tập] Xếp hạng học sinh !!</h2>
+                    <h4> Nguyễn Quốc Báo - C0619G1 </h4>
+                </div>
+                <br>
+                <br>
+                <div id="test">
+                    Nhập điểm kiểm tra lần 1: <br>
+                    <input type="text" id="diemkt1" value=""> <br><br>
+                    Nhập điểm kiểm tra lần 2: <br>
+                    <input type="text" id="diemkt2" value=""> <br><br>
+                    Nhập điểm giữa kì: <br>
+                    <input type="text" id="diemgiuaki" value=""> <br><br>
+                    Nhập điểm cuối kì: <br>
+                    <input type="text" id="diemcuoiki" value=""> <br><br>
+                    <input type="button" id="btm" onclick="check()" value="Kiểm Tra">
+                    
+                    <br>
+                </div>
+                <div id="kq"></div>
+        </div>
+        
+        <script>
+            function check() {
+                let diem1 = parseFloat(document.getElementById("diemkt1").value);
+                let diem2 = parseFloat(document.getElementById("diemkt1").value);
+                let diemgk = parseFloat(document.getElementById("diemgiuaki").value);
+                let diemck = parseFloat(document.getElementById("diemcuoiki").value);
+                let diemtk = (diem1 + diem2 + diemgk*2 + diemck*3)/7;
+                console.log(diemtk);
+                       
+                alert((diemtk >= 8)? 'Xếp loại gioi' :
+                                    (diemtk >=6.5) ? 'Xếp loại khá' :    
+                                                     (diemtk >=5)  ? 'xếp loại trung bình' :
+                                                                     (diemtk >=3) ? 'Xếp loại yếu' : 'Xếp loại kém' )
+
+                   
+                
+            }
+           
+        </script>
+</body>
+</html>
