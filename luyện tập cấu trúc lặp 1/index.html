@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1050px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: darkcyan;
+            height: 980px;
+        }
+        .myname {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+        .kq {
+            color: black ;
+            
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body style="background-color: burlywood">
+     <div class="wrapper">
+         <div class="myname">
+                <h2>[Bài tập] Luyện tập vòng lặp 1</h2>
+                <h3> Nguyễn Quốc Báo C0619G1 </h3>
+         </div>
+
+        <div class="kq">
+            
+            <fieldset class="border p-3">
+            <legend>Bài Làm</legend>
+            
+            <h5>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</h5>
+            <button class="btm" onclick="bai1()">Thực thi</button>
+            <div id="result"></div> 
+            
+            <h5>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. 
+                Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+            </h5>
+            <button class="btm" onclick="(bai2())">Thực thi</button><br>
+            
+            <h5>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h5>
+            <button class="btm" onclick="bai3()">Thực thi</button>
+            <div id="resultFib"></div> 
+            
+            <h5>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h5>
+            <button class="btm" onclick="bai4()">Thực thi</button><br>
+            
+            <h5>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h5>
+            <button class="btm" onclick="bai5()">Thực thi</button><br>
+            
+            <h5>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h5>
+            <button class="btm" onclick="bai6()">Thực thi</button>
+
+            <h5>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. 
+                Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. 
+                Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+            </h5>
+            <button class="btm" onclick="bai7()">Thực thi</button><br>
+            <div id="resultfizzbuzz"></div><br><br>
+
+            </fieldset>
+       <script src="js.js"></script>
+
+</body>
+</html>

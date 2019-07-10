@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+        .wrapper{
+            width: 1050px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: rgb(13, 211, 211);
+            height: 1180px;
+        }
+        .name {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+        .game{
+            width: 1050px;
+            margin: auto;
+            border: 0;
+            padding: 0px;
+            background: rgb(3, 107, 107);
+            height: 980px;
+        }
+        body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+ 
+.button_container {
+    position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+ 
+.button_container p {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 35px;
+}
+ 
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  left: 593px;
+  top: 192px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+ 
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+ 
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+ 
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+    </style>
+</head>
+<body style="background-color: bisque">
+    <div class="wrapper">
+            <div class="name">
+            <h2>[Bài tập] Game đoán số !</h2>
+            <h4>Nguyễn Quốc Báo C0619G1</h4>
+        </div>
+        <div class="game">
+            <div class="button_container"></div>
+            <button class="btn" onclick="play()"><span>Play</span></button>
+
+        </div>
+    </div>
+    <script>
+        function play(){
+            let min = +prompt('Nhập khoảng bạn muốn chọn ');
+            let max = +prompt('Nhập khoảng bạn muốn chọn ');
+            
+            // let so2 = +prompt('Nhập khoảng bạn muốn chọn ');
+
+            let rdm = Math.floor(Math.random() * (max - min+1)) + min;
+            console.log(rdm);
+            let i = 1;
+            while(i<4){
+                let doan = +prompt('Nhập số bạn đoán!: ');
+                if (doan === rdm) {
+                alert ('Wow ! Chúc mừng bạn đã đoán đúng ');
+                i = 4;
+                }else alert('Rất tiếc! Sai rồi');
+                i++;
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 1050px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: darkcyan;
+            height: 800px;
+        }
+        .myname {
+            text-align: center;
+            color:darkslateblue;
+            font-size: 20px;
+        }
+        .kq {
+            color: black ;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body style="background-color: burlywood">
+        <div class="wrapper">
+            <div class="myname">
+                <h2>[Bài tập] In số số nguyên tố!</h2>
+                <h3> Nguyễn Quốc Báo C0619G1 </h3>
+
+            </div>
+            <div class="noidung">
+                <fieldset>
+                    <legend>Hiện số Nguyên tố!</legend>    
+                    <label> </label>                 
+                    <!-- <input type="text" id="x" name="sosonguyento" value="" ><br><br> -->
+                    <!-- <input type="button" id="kiemtra" value="kiểm tra" onclick="ktSonguyento()"> -->
+                    <div id="inketqua" class="kq"></div>
+                </fieldset>
+            
+            </div>
+        </div>
+
+        <script>
+           function ktSonguyento(snt){
+               if (snt< 2 ) return false;
+               for (let i = 2; i<= Math.sqrt(snt);i++){
+                   if  (snt % i === 0) return false;
+               }
+               return true;
+           }
+
+        //    let soSNT = +document.getElementById('x').value;
+           let soSNT = +prompt('Nhập vào số số nguyên tố cần in : ');   
+           console.log(soSNT);
+           let count = 1;
+           let result = "";
+           let n = 2;
+           while(count <= soSNT){
+               if (ktSonguyento(n)){
+                   result += n + "  ";
+                   count ++;
+               }
+               n++;
+           }
+           document.getElementById('inketqua').innerHTML = result;
+
+
+
+        </script>
+</body>
+</html>
