@@ -122,7 +122,12 @@
                 if (doan === rdm) {
                 alert ('Wow ! Chúc mừng bạn đã đoán đúng ');
                 i = 4;
-                }else alert('Rất tiếc! Sai rồi');
+                }else if(doan < rdm){
+                 alert('Lớn hơn chút nữa !');
+                } else if (doan > rdm) {
+                    alert ('nhỏ hơn chút đi !');
+                }
+                
                 i++;
             }
         }
