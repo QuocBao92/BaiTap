@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                background: #c8d8ee;
+            }       
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background: #eef2fb;
+                height: auto;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color: azure;
+                font-size: 30px;
+                text-align: center;
+            }       
+            
+        </style>
+       
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name">
+            [Bài tập] Ứng dụng quản lý sản phẩm!!
+            <h5>Nguyễn Quốc Báo - C0619G1</h5>
+        </div>
+        <div class="container mt-5">
+            <fieldset class="border p-3">
+                <legend>Đề bài</legend>
+                    Ứng dụng quản lý sản phẩm có các chức năng sau: <br>
+                  
+                    - Hiển thị danh sách sản phẩm <br>
+                    - Có thể thêm một sản phẩm mới vào danh sách <br>
+                    - Có thể sửa tên của sản phẩm trong danh sách <br>
+                    - Có thể xoá một sản phẩm khỏi danh sách <br>
+                    <br>
+            </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <legend>Bài làm</legend>
+        <form class="add product">
+            <h3>Add New Product</h3>
+            <input type="text" id="newProduct" placeholder="New Product">
+            <input type="button"  id="addNewProduct" value="Add" onclick="addProduct()" >
+        </form>
+        <p id="listProduct">
+            
+        </p>
+        </fieldset>
+
+        <fieldset> 
+                <h3>Edit Product</h3>
+                <input type="text" id="editProduct">
+                <input type="button"  value="Update" onclick="editProduct()" >
+            </form>
+        </fieldset>
+        <script src="my-script.js"></script>
+    </div>
+</body>
+</html>

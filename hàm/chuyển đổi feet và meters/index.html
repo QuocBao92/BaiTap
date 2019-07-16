@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                background: #c8d8ee;
+            }       
+            .wrapper{
+                width: 960px;
+                margin: auto;
+                border: 0;
+                padding: 10px;
+                background: #eef2fb;
+                height: auto;
+            }
+            .name{
+                background: #5787d3;
+                padding: 10px;
+                border-radius: 5px;
+                color: azure;
+                font-size: 30px;
+                text-align: center;
+            }       
+            
+        </style>
+        
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name">
+            [Bài tập] Chuyển đổi giữa feet và meters !!
+            <h5>Nguyễn Quốc Báo - C0619G1</h5>
+        </div>
+        <div class="container">
+            <center><h2></h2></center>
+            <form >
+                <legend>Bài làm</legend>
+               <table>
+                   <thead>
+                       <th>Input value :</th>
+                       <th>From</th>
+                       <th>To</th>
+                       <th></th>
+                   </thead>
+                   <tbody>
+                       <td>
+                            <input type="text" id="num" value="">
+                       </td>
+                       <td>
+                            <select id="f">
+                                <option value="ffeet">Feet</option>
+                                <option value="fmeter">Metters</option>
+                            </select>
+                        </td>   
+                        <td>
+                            <select id="t">
+                                <option value="tmeter">Meters</option>
+                                <option value="tfeet">Feet</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="button" id="convert" value="Convert" onclick="check();">
+                        </td>
+                   </tbody>
+               </table>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+   <script>
+       function check()
+       {
+
+            let length = +document.getElementById('num').value;
+            let fvalue = document.getElementById('f').value;
+            let tvalue = document.getElementById('t').value;
+            let result ;
+            console.log(length);
+            if ((fvalue === 'ffeet') && (tvalue === 'tmeter'))
+            {
+                result = feetTometer(length);
+            }else if ((fvalue === 'fmeter') && (tvalue === 'tfeet'))
+            {
+                result = meterTofeet(length);
+
+            }
+            else 
+            {
+                result = length;
+            }
+            if (result<0) 
+            {
+                alert('Nhập lại ! không phải độ dài');
+            }
+            else 
+            {
+                console.log(result);
+                document.getElementById('result').innerHTML = "Kết quả : " +result;
+            }
+        }
+
+       function feetTometer(x){
+            return x*0.305;
+       }
+       function meterTofeet(x){
+           return x*3.279;
+       }
+   </script>
+</body>
+</html>

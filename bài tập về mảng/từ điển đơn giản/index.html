@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="js.js"></script>
+<style>        
+    .wrapper{
+        width: 960px;
+        margin: auto;
+        border: 0;
+        padding: 10px;
+        background:darkcyan;
+        height: 650px;
+    }
+    .name{
+        background: #5787d3;
+        padding: 10px;
+        border-radius: 5px;
+        color:rgb(169, 238, 31);
+        font-size: 30px;
+        text-align: center;
+    }
+    .nd {
+        text-align: center;
+        font-size: 30px;
+        color:salmon;
+        font-weight: bold;
+    }
+ 
+</style>
+<body style="background-color:indianred">
+    <div class="wrapper">
+        <div class="name">
+            <h2>[Bài tập] Làm từ điển đơn giản !!</h2>
+            <h4> Nguyễn Quốc Báo C0619G1 </h4>
+        </div>
+        <div class="nd">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Words</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Translate From</th>
+                    <th>&nbsp;&nbsp;</th>
+                    <th>Translate To</th>
+                    
+                    <th></th>
+                  </tr>
+    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td  >
+                            <input id="words" type="text" value="">
+                        </td>
+                        <td>&nbsp</td>
+                        <td  >
+                            <select id="f">
+                                <option value="fviet">Việt Nam</option>
+                                <option value="fmy">Mỹ</option>
+                                
+                                
+                              </select>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td  >
+                            <select id="t">
+                                <option value="tviet">Việt Nam</option>
+                                <option value="tmy">Mỹ</option>
+                                
+                            </select>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <input id = "convert" type="submit" value="TransLate" onclick="translate1()" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div id="kq"></div>
+       
+</body>
+</html>

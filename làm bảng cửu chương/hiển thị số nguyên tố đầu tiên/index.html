@@ -55,20 +55,27 @@
                return true;
            }
 
-        //    let soSNT = +document.getElementById('x').value;
-           let soSNT = +prompt('Nhập vào số số nguyên tố cần in : ');   
-           console.log(soSNT);
-           let count = 1;
-           let result = "";
-           let n = 2;
-           while(count <= soSNT){
-               if (ktSonguyento(n)){
-                   result += n + "  ";
-                   count ++;
-               }
-               n++;
-           }
-           document.getElementById('inketqua').innerHTML = result;
+       
+            
+                let soSNT = +prompt('Nhập vào số số nguyên tố cần in : ');   
+                console.log(soSNT);
+                if (!isNaN(soSNT)){
+                    let count = 1;
+                    let result = "";
+                    let n = 2;
+                    while(count <= soSNT){
+                        if (ktSonguyento(n)){
+                            result += n + "  ";
+                            count ++;
+                        }
+                        n++;
+                        document.getElementById('inketqua').innerHTML = +soSNT+ ' số nguyên tố đầu tiên đó là : ' +result;
+                    }
+                }else {alert('Nhập lại không phải là số');
+                document.getElementById('inketqua').innerHTML = 'Không phải số vui lòng nhập lại!';
+             }
+           
+           
 
 
 
