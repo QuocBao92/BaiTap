@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Mô tả câu chuyện Adam & Eva </title>
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .name{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name">
+                [Bài tập] Mô tả câu chuyện Adam & Eva !!
+            <h5>Nguyễn Quốc Báo - C0619G1</h5>
+        </div>
+        <div class="container mt-5">       
+            <fieldset class="border p-3">
+                <legend>Bài Làm</legend>       
+                <fieldset>
+                    <legend>Cat</legend>
+                    <p id="adamStatus">Trạng Thái: Cat(<span id="wCat"></span>)</p>
+                    <p>
+                        <button id="adamEat" onclick="adamEat()">Eat</button>
+                        <button id="soundCat" onclick="playSoundCat()">Sound</button>
+                    </p>
+                </fieldset>
+                <hr>
+                <div id="apple"></div>
+                <fieldset>
+                    <legend>Rat</legend>
+                    <p id="adamStatus">Trạng Thái: Eva(<span id="wRat"></span>)</p> 
+                    <p>
+                        <button id="adamEat" onclick="evaEat()">Eat</button>
+                        <button id="soundRat" onclick="playSoundRat()">Sound</button>
+                    </p>
+                </fieldset>
+            </fieldset>         
+        </div>
+    </div>
+    <script src="adameva.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
