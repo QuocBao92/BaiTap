@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isViettelPhoneNumber(str) {
+			let regexp = /^0(86[0-9]{7})|(9[6-8][0-9]{7})|(3[2-9][0-9]{7})$/;
+			return regexp.test(str);
+		}
+		let arr = ["0934285559", "0963440460", "0936351371", "0904331361", "0904080836", "0936969367", "0906014079", "0906122911", "0799234593", "0947390903", "0945667794", "0942077993", "0941878116", "0941871113", "0941457068", "0769260808", "0965431491", "0981514574", "0971014084", "0965314374", "0965124154", "0766458787", "0763411110", "0762473737", "0768350808", "0788453737", "0795339997", "0963707371", "0906027302", "0936545493"];
+		for (let i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			
+			if (isViettelPhoneNumber(arr[i])) {
+				document.write(": là số điện thoại Viettel<br>");
+			} else {
+				document.write(": không phải là số điện thoại Viettel<br>");
+			}
+		}
+	</script>
+</body>
+</html>

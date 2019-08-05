@@ -11,7 +11,7 @@ class Rat {
 }
 
 class Cat {
-    constructor(name, weight, speed, live){
+    constructor(name, weight, speed, status){
         this.name = name;
         this.weight = weight;
         this.speed = speed;

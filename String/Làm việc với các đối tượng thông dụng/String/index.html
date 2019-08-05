@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String | [*Bài tập] Làm việc với các đối tượng thông dụng</title>
+</head>
+
+<body>
+    <span>Số chữ a trong chuỗi "Tôi yêu ngôn ngữ lập trình javascript": </span> <span id="demchu"></span><br>
+    <br>
+    <span>Bấm F12 để xem kết quả của việc tách chuỗi trên thành mảng</span><br>
+    <br>
+    <span>Số lượng từ có trong chuỗi trên là: </span> <span id="sotu"></span><br>
+    <br>
+    <span>Chuỗi sau khi được thay thế là: </span> <span id="thaythe"></span>
+</body>
+<script>
+    let value = "Tôi yêu ngôn ngữ lập trình javascript!";
+    let count = 0;
+    for (let i = 0; i < value.length; i++) {
+        if (value[i] === "a")
+            count++;
+    }
+    document.getElementById("demchu").innerHTML = count;
+    let arrValue = value.split(" ");
+    console.log(arrValue);
+    document.getElementById("sotu").innerHTML = arrValue.length;
+    let chuoimoi = "";
+    chuoimoi = value.replace('javascript', 'Typescript');
+    document.getElementById("thaythe").innerHTML = chuoimoi;
+</script>
+
+</html>
