@@ -13,11 +13,11 @@ class StatusGame {
         if(state.current == state.getReady) {
             ctx.drawImage(this.sprite, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h );
             ctx.fillStyle = "black";
-            ctx.font = "35px File";
+            ctx.font = "35px Oleo Script";
             ctx.fillText("CODEGYM : C0619G1", 55, 440);
             ctx.fillStyle = "green";
-            ctx.font = "40px SVN-Goldeye Type";
-            ctx.fillText("Nguyễn Quốc Báo", 90, 480);
+            ctx.font = "35px  'Oleo Script'";
+            ctx.fillText("Nguyễn Quốc Báo", 80, 480);
         }
        
     };

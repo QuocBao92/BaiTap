@@ -25,7 +25,11 @@ class Bird {
     };
 
     flap(){
-        this.speed = -this.jump;
+        if(this.y - this.h/2 > 0){
+            this.speed = -this.jump;
+        }else {
+            this.speed = 0;
+        }
     };
 
     update(){

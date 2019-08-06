@@ -57,7 +57,11 @@ const startButton = {
 moveup = () =>{
     if(state.current == state.game){
         flap_s.play();
-        bird.speed = -bird.jump; 
+        if(bird.y - bird.h/2 > 0){
+            bird.speed = -bird.jump;
+            }else {
+                bird.speed = 0;
+            }
     } else {
         state.current = state.over;
     }
@@ -67,6 +71,7 @@ cvs.addEventListener('click',(evt) =>{
     switch(state.current){
         case state.getReady :
             state.current = state.game;
+            document.addEventListener("keydown",moveup);
             swhooshing_s.play();
             break;
         case state.game :
