@@ -1,7 +1,7 @@
 class Score {
-    constructor(best,value){
+    constructor(){
         this.best = +(localStorage.getItem('best')) || 0;
-        this.value = value;
+        this.value = 0;
     }
     draw (ctx){
         ctx.fillStyle = '#FFF';

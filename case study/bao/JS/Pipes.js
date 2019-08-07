@@ -33,7 +33,7 @@ class Pipes {
     //MOVE THE PIPES
     update(){
         if(state.current !== state.game) return;
- 
+        // push pipes mỗi 100 khung hình
         if(frames % 100 == 0){
             this.position.push({
                 x: WIDTH_CANVAS,
@@ -42,7 +42,6 @@ class Pipes {
         }
         for( let i = 0; i < this.position.length; i++){
             let p = this.position[i];
-           
             let bottomPipesYpos = p.y + this.heigth + this.gap;
 
             if(bird.x + bird.radius > p.x && bird.x - bird.radius < p.x + this.width 
@@ -55,20 +54,17 @@ class Pipes {
                 state.current = state.over;
                 hit_s.play();
             }
-            
             p.x -= this.dx;
              
-
             if(p.x + this.width <= 0){
                 this.position.shift();
                 score.value +=1;
                 score_s.play();
-                score.best = Math.max(score.value, score.best)
+                score.best = Math.max(score.value, score.best);
                 localStorage.setItem("best", score.best);
             }
         }
     }
-
     reset(){
         this.position = [];
     }

@@ -9,13 +9,16 @@ class Background {
         this.dx = dx;
         this.sprite = sprite;
     }
-
     draw(ctx){
         ctx.drawImage(this.sprite, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h )
         ctx.drawImage(this.sprite, this.sX, this.sY, this.w, this.h, this.x + this.w, this.y, this.w, this.h )
     }
-    
-    update(){
+    updateForeground(){
+        if(state.current == state.game){
+            this.x = (this.x - this.dx) % (this.w/4)
+        }
+    }
+    updateBackround(){
         if(state.current == state.game){
             this.x = (this.x - this.dx) % (this.w/5)
         }

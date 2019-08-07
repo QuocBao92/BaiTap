@@ -17,21 +17,18 @@ class Bird {
 
         this.speed = 0;
         this.frame = 0;
-        this.rotation = 0;
-    };
+    }
     draw(ctx){
         let bird = this.animation[this.frame];
         ctx.drawImage(this.sprite, bird.sX, bird.sY, this.w, this.h, this.x - this.w/2, this.y - this.h/2, this.w, this.h)
-    };
-
+    }
     flap(){
         if(this.y - this.h/2 > 0){
             this.speed = -this.jump;
         }else {
             this.speed = 0;
         }
-    };
-
+    }
     update(){
         // Tốc độ bay khi game ready  và khi game start
         this.period = state.current === state.getReady ? 10 : 5;
@@ -55,6 +52,6 @@ class Bird {
         }       
     }
     speedReset(){
-        this.speed = 0
+        this.speed = 0;
     }
 }

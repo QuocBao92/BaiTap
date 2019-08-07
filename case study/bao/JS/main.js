@@ -9,7 +9,7 @@ let frames = 0;
 //ADD IMAGE
 
 let sprite = new Image();
-sprite.src = "img/sprite.png"; 
+sprite.src = "img/sprite.png";
 
 //LOAD SOUNDS
 let die_s = new Audio();
@@ -27,24 +27,22 @@ hit_s.src = "audio/hit.wav";
 let swhooshing_s = new Audio();
 swhooshing_s.src = "audio/swooshing.wav";
 
-
-
-
+// DECLARE GAME VAR 
 let background = new Background(sprite, 0, 0, 275, 226, 0, 1);
-let foreground = new Background(sprite, 276, 0, 224, 112, 0, 2 );
+let foreground = new Background(sprite, 276, 0, 224, 112, 0, 2);
 let bird = new Bird(sprite, 50, 150, 34, 26, 12, 0.25, 4.3);
-let getReady = new StatusGame (sprite, 0, 228, 173, 152, 80);
+let getReady = new StatusGame(sprite, 0, 228, 173, 152, 80);
 let gameOver = new StatusGame(sprite, 175, 228, 225, 202, 90);
 let pipes = new Pipes(sprite, -150, 85, 2, 53, 400);
-let score = new Score(0, 0);
+let score = new Score();
 
 
 //CONTROL THE GAME
 const state = {
-    current : 0,
+    current: 0,
     getReady: 0,
-    game : 1 ,
-    over : 2      
+    game: 1,
+    over: 2
 }
 
 const startButton = {
@@ -54,28 +52,26 @@ const startButton = {
     h: 29,
 }
 
-moveup = () =>{
-    if(state.current == state.game){
+moveup = () => {
+    if (state.current == state.game) {
         flap_s.play();
-        if(bird.y - bird.h/2 > 0){
+        if (bird.y - bird.h / 2 > 0) {
             bird.speed = -bird.jump;
-            }else {
-                bird.speed = 0;
-            }
-    } else {
-        state.current = state.over;
+        } else {
+            bird.speed = 0;
+        }
     }
 }
-
-cvs.addEventListener('click',(evt) =>{
-    switch(state.current){
-        case state.getReady :
+// ADD EVENT CLICK TO CANVAS
+cvs.addEventListener('click', (evt) => {
+    switch (state.current) {
+        case state.getReady:
             state.current = state.game;
-            document.addEventListener("keydown",moveup);
+            document.addEventListener("keydown", moveup);
             swhooshing_s.play();
             break;
-        case state.game :
-            document.addEventListener("keydown",moveup);
+        case state.game:
+            document.addEventListener("keydown", moveup);
             bird.flap();
             flap_s.play();
             break;
@@ -84,20 +80,19 @@ cvs.addEventListener('click',(evt) =>{
             // console.log(rect)        
             let clickX = evt.clientX - rect.left;
             let clickY = evt.clientY - rect.top;
-            // console.log(clickX)
-            if(clickX >= startButton.x && clickX <= startButton.x + startButton.w && clickY >= startButton.y && clickY <= startButton.y + startButton.h){
-            state.current = state.getReady;
-            pipes.reset();
-            bird.speedReset();
-            score.reset();   
+            console.log(rect.top)
+            if (clickX >= startButton.x && clickX <= startButton.x + startButton.w && clickY >= startButton.y && clickY <= startButton.y + startButton.h) {
+                state.current = state.getReady;
+                pipes.reset();
+                bird.speedReset();
+                score.reset();
             }
             break;
     }
 });
 
 //DRAW
-
-draw = () =>{
+draw = () => {
     ctx.fillStyle = "#70c5ce";
     ctx.fillRect(0, 0, cvs.width, cvs.height);
     background.draw(ctx);
@@ -107,21 +102,22 @@ draw = () =>{
     getReady.drawGetReady(ctx);
     gameOver.drawGameOver(ctx);
     score.draw(ctx);
-    
 }
 
-update = () =>{
+//UPDATE
+update = () => {
     bird.update();
-    foreground.update();
-    background.update();
+    foreground.updateForeground();
+    background.updateBackround();
     pipes.update();
 }
 
-loop = ()=>{
+//LOOP
+loop = () => {
     update();
     draw();
     frames++;
-    requestAnimationFrame(loop)
+    requestAnimationFrame(loop);
 }
 loop();
 
